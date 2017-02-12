@@ -67,13 +67,17 @@
   background-color: #EEFDF9;
   padding: 0px;
   margin: 0px; }
+  #gallery .container {
+    padding: 0;
+    margin: 0;
+    max-width: 992px; }
   #gallery .col-md-4 {
     overflow: hidden;
-    padding: 0px 5px 10px 5px; }
+    padding: 10px 20px; }
     #gallery .col-md-4 img {
       height: 100%;
-      max-width: 390px;
-      max-height: 380px; }
+      max-width: 370px;
+      max-height: 280px; }
 
 #contact p {
   font-size: 24px;
@@ -83,7 +87,7 @@
 #social {
   padding: 20px; }
   #social a {
-    margin-top: 0px 0px 0px 10px;
+    margin: 0px 10px;
     text-decoration: none; }
   #social img {
     height: 20px; }
