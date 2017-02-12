@@ -11,13 +11,16 @@ $(document).ready(function () {
       $menu.removeClass("open");
 
       return evt.target.tagName === "A";
+    })
+    .on("mouseup", "#main-wrapper", function() {
+      $menu.removeClass("open");
     });
 
   getWeather();
 
   function getWeather() {
     $.ajax({
-      url : "http://api.wunderground.com/api/76d868d2ebbf9bcc/geolookup/conditions/q/98052.json",
+      url : "http://api.wunderground.com/api/76d868d2ebbf9bcc/geolookup/conditions/q/autoip.json",
       dataType : "jsonp",
       success : function(parsed_json) {
         var conditions = parsed_json.current_observation.weather;
