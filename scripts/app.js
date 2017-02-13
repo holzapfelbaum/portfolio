@@ -2,18 +2,30 @@ $(document).ready(function () {
   var $menu = $("#sidebar-wrapper");
 
   $(document)
-    .on("click", ".js-menu-open", function(evt) {
+    .on("click", ".js-menu-open", function() {
       $menu.addClass("open");
 
-      return evt.target.tagName === "A";
+      /*return evt.target.tagName === "A";*/
     })
-    .on("click", ".js-menu-close", function(evt) {
+    .on("click", ".js-menu-close", function() {
       $menu.removeClass("open");
 
-      return evt.target.tagName === "A";
+      /*return evt.target.tagName === "A";*/
+    })
+    .on("click", "#sidebar-wrapper", function() {
+      $menu.removeClass("open");
+
+      /*return evt.target.tagName === "A";*/
     })
     .on("mouseup", "#main-wrapper", function() {
       $menu.removeClass("open");
+
+      /*return evt.target.tagName === "A";*/
+    })
+    .on("mouseleave", "#sidebar-wrapper", function() {
+      $menu.removeClass("open");
+
+      /*return evt.target.tagName === "A";*/
     });
 
   getWeather();
